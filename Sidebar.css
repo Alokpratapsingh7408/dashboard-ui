@@ -1,0 +1,201 @@
+/* Sidebar container styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px;  /* Width when sidebar is open */
+    background-color: #fff;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1; 
+}
+
+/* Sidebar Logo */
+.sidebar-logo h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f7336a;
+    margin-bottom: 20px;
+}
+
+/* Profile Section */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+/* Status Dot */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.online {
+    background-color: #00ff00; /* Green for online */
+}
+
+/* Search Box */
+.sidebar-search {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+}
+
+/* Sidebar Menu */
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover, .sidebar-menu li.active a {
+    background-color: #ff4081;
+    color: white;
+}
+
+.sidebar-menu li a svg {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.menu-badge {
+    background-color: #ff4081;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+/* Category Section */
+.sidebar-category {
+    margin-top: 20px;
+}
+
+.category-title {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.sidebar-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-category ul li {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.sidebar-category ul li .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar-category ul li .red {
+    background-color: #ff0000;
+}
+
+.sidebar-category ul li .green {
+    background-color: #00ff00;
+}
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    transition: width 0.3s ease;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar.closed {
+    width: 0; /* Adjust the width when collapsed */
+}
+
+
+.sidebar-logo, 
+.sidebar-profile, 
+.sidebar-menu, 
+.sidebar-category {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.closed .sidebar-logo, 
+.sidebar.closed .sidebar-profile, 
+.sidebar.closed .sidebar-menu, 
+.sidebar.closed .sidebar-category {
+    opacity: 0;  /* Content inside the sidebar is hidden */
+    pointer-events: none;  /* Disable interaction when closed */
+}
+
+/* Profile and search area adjustments when sidebar is closed */
+.sidebar.closed .profile-info h3, 
+.sidebar.closed .profile-info p,
+.sidebar.closed .sidebar-search {
+    display: none;
+}

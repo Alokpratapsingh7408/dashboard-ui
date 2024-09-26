@@ -1,0 +1,97 @@
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 2;  /* Higher than sidebar (which has z-index: 1) */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Links */
+.header-navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header-navigation ul li {
+    margin-right: 310px; /* Increase spacing between menu items */
+}
+
+.header-navigation li {
+    margin-right: 20px;
+}
+
+.header-navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header-navigation a:hover {
+    color: #ff4081; /* Highlight color on hover */
+}
+
+/* Right-Side Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.help-button {
+    margin-right: 20px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.help-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Icons with Badges */
+.icon {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Notification and Alert Badges */
+.badge {
+    position: relative;
+    top: -10px;
+    left: -12px;
+    background-color: #ff4081; /* Default red badge */
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.badge.green {
+    background-color: #4caf50; /* Green badge for message */
+}
+
+.badge.red {
+    background-color: #ff4081; /* Red badge for alerts */
+}
+
+/* User Profile Section */
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-profile span {
+    margin-left: 8px;
+    font-weight: 600;
+}
